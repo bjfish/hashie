@@ -12,7 +12,7 @@ before_install:
 - echo JAVA_HOME=$JAVA_HOME >> mx.jruby/env
 - mx build
 - rvm mount $PWD -n truffleruby
+- rvm use ext-truffleruby
 
 rvm:
   - 2.3.0
-  - ext-truffleruby
