@@ -1,6 +1,17 @@
 language: ruby
 sudo: false
 cache: bundler
+jdk: oraclejdk8
+
+install:
+- git clone https://github.com/graalvm/mx
+- export PATH=$PWD/mx:$PATH
+- git clone https://github.com/graalvm/truffleruby
+- cd truffleruby
+- echo MX_BINARY_SUITES=truffle >> mx.jruby/env
+- echo JAVA_HOME=$JAVA_HOME >> mx.jruby/env
+- mx build
+- rvm mount $PWD -n truffleruby
 
 rvm:
   - 2.4.0
@@ -12,6 +23,7 @@ rvm:
   - jruby-9.0.5.0
   - jruby-head
   - ruby-head
+  - ext-truffleruby
 
 matrix:
   include:
