@@ -3,7 +3,7 @@ sudo: false
 cache: bundler
 jdk: oraclejdk8
 
-install:
+before_install:
 - git clone https://github.com/graalvm/mx
 - export PATH=$PWD/mx:$PATH
 - git clone https://github.com/graalvm/truffleruby
