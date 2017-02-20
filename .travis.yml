@@ -19,4 +19,4 @@ before_install:
 rvm:
   - 2.3.0
 
-script: bundle exec rake
+script: bundle exec rake spec
