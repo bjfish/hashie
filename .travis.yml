@@ -18,8 +18,9 @@ before_install:
 - export RUBYOPT=-ropenssl-stubs
 - gem uninstall bundler -a -x
 - gem install bundler -v 1.13.7
-
-install:
 - bundle install
+
+install: "echo 'Skip Install'"
+
 
 script: bundle exec rake spec
