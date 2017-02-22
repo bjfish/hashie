@@ -11,11 +11,13 @@ before_install:
 - echo MX_BINARY_SUITES=truffle >> mx.jruby/env
 - echo JAVA_HOME=$JAVA_HOME >> mx.jruby/env
 - mx build
+- > ~/.rvm/gemsets/global.gems
+- > ~/.rvm/gemsets/default.gems
 - rvm mount $PWD -n truffleruby
 - rvm use ext-truffleruby
 - export RUBYOPT=-ropenssl-stubs
 - gem uninstall bundler -a -x
 - gem install bundler -v 1.13.7
-- bundle _1.13.7_ install
+- bundle install
 
 script: bundle exec rake
