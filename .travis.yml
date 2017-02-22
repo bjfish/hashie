@@ -11,8 +11,8 @@ before_install:
 - echo MX_BINARY_SUITES=truffle >> mx.jruby/env
 - echo JAVA_HOME=$JAVA_HOME >> mx.jruby/env
 - mx build
-- > ~/.rvm/gemsets/global.gems
-- > ~/.rvm/gemsets/default.gems
+- "> ~/.rvm/gemsets/global.gems"
+- "> ~/.rvm/gemsets/default.gems"
 - rvm mount $PWD -n truffleruby
 - rvm use ext-truffleruby
 - export RUBYOPT=-ropenssl-stubs
