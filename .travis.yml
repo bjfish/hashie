@@ -13,7 +13,9 @@ before_install:
 - mx build
 - rvm mount $PWD -n truffleruby
 - rvm use ext-truffleruby
+- export RUBYOPT=-ropenssl-stubs
 - gem install bundler -v 1.13.5
+- bundle install
 
 rvm:
   - 2.3.0
