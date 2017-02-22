@@ -1,4 +1,4 @@
-language: ruby
+language: java
 sudo: false
 cache: bundler
 jdk: oraclejdk8
@@ -17,8 +17,5 @@ before_install:
 - gem uninstall bundler -a -x
 - gem install bundler -v 1.13.7
 - bundle _1.13.7_ install
-
-rvm:
-  - 2.3.0
 
 script: bundle exec rake
