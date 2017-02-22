@@ -14,7 +14,7 @@ before_install:
 - rvm mount $PWD -n truffleruby
 - rvm use ext-truffleruby
 - export RUBYOPT=-ropenssl-stubs
-- gem install bundler -v 1.13.5
+- gem install bundler -v 1.13.7
 - bundle _1.13.7_ install
 
 rvm:
